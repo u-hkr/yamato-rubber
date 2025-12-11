@@ -19,11 +19,11 @@ html {
 }
 
 body {
-  font-family: "BIZ UDPGothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-family: $font;
   font-weight: normal;
   font-size: 1.6rem;
-  line-height: 1.7;
-  color: $black_color;
+  line-height: 1.8;
+  color: $base_color;
   word-break: break-all;
   margin: 0;
   padding: 0;

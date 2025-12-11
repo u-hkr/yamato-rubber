@@ -1,0 +1,28 @@
+.c-section {
+  padding: 0 2.5rem;
+}
+.c-inner {
+  max-width: 1428px;
+  margin: 0 auto;
+}
+
+.c-heading {
+  max-width: 1920px;
+  margin: 17.7rem auto 0;
+  .sec-inner {
+    display: grid;
+    grid-template-columns: 1032fr 888fr;
+    height: 65.5rem;
+  }
+  .sec-left {
+    .en {
+      font-size: 13.54vw;
+      font-size: clamp(0px, 13.54vw, 260px);
+      font-weight: bold;
+    }
+  }
+  .sec-right {
+    width: 100%;
+    height: 100%;
+  }
+}
