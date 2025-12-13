@@ -198,4 +198,162 @@ figure img,
 .c-heading .sec-right {
   width: 100%;
   height: 100%;
+}
+
+.c-title {
+  display: block;
+  margin-bottom: 0.8em;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.c-title-ellipse {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  padding-left: 0.9em;
+  line-height: 1.6;
+}
+.c-title-ellipse::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0.2em;
+  width: 0.5em;
+  height: 0.5em;
+  background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
+}
+
+.c-subtitle-ellipse {
+  display: block;
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 0.9em;
+  line-height: 1.6;
+}
+.c-subtitle-ellipse::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0.2em;
+  width: 0.5em;
+  height: 0.5em;
+  background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
+}
+
+.c-btn {
+  position: relative;
+  display: inline-block;
+  min-width: 376px;
+  padding: 30px 126px 30px 48px;
+  background: #241915;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition-property: background, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.c-btn .arw {
+  position: absolute;
+  right: 4.8rem;
+  top: calc(50% - 23px);
+  width: 62px;
+  height: 47px;
+  background: url(../img/common/icon-ellipse-gray.svg) center/contain no-repeat;
+}
+.c-btn .arw::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: -2px;
+  background: url(../img/common/icon-arrow.svg) center/14px no-repeat;
+}
+.c-btn:hover {
+  background: #E81E10;
+  color: #fff;
+}
+.c-btn:hover .arw {
+  background-image: url(../img/common/icon-ellipse-outline-white.svg);
+}
+.c-btn:hover .arw::before {
+  background-image: url(../img/common/icon-arrow-white.svg);
+}
+
+.c-btnlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.c-btnlist-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  border-bottom: 1px solid #241915;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+.c-btnlist-btn .arw {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 3px;
+  width: 43px;
+  height: 33px;
+  background: url(../img/common/icon-ellipse-gray.svg) center/contain no-repeat;
+}
+.c-btnlist-btn .arw::before, .c-btnlist-btn .arw::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.c-btnlist-btn .arw::before {
+  position: relative;
+  margin-top: -1px;
+  background: url(../img/common/icon-arrow.svg) center/10px no-repeat;
+  z-index: 2;
+}
+.c-btnlist-btn .arw::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.c-btnlist-btn:hover .arw::before {
+  background-image: url(../img/common/icon-arrow-white.svg);
+}
+.c-btnlist-btn:hover .arw::after {
+  opacity: 1;
+}
+
+#mv {
+  height: 100vh;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100lvh;
+  z-index: -999;
+}
+#bg * {
+  height: 100%;
+}
+#bg img {
+  display: block;
+  margin: 0 4.4rem;
 }/*# sourceMappingURL=style.css.map */
