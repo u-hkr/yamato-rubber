@@ -12,17 +12,48 @@
   .sec-inner {
     display: grid;
     grid-template-columns: 1032fr 888fr;
-    height: 65.5rem;
+    height: 655px;
+    height: clamp(0px, 34.11vw, 655px);
   }
   .sec-left {
+    padding-top: 8rem;
+    padding-left: clamp(0px, 4vw, 88px);
+
+    .title {
+      position: relative;
+      display: block;
+      font-size: 5.6rem;
+      font-size: clamp(0px, 3vw, 56px);
+      font-weight: 700;
+      padding-left: 1.64em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: .2em;
+        left: .2em;
+        width: 1em;
+        height: 1em;
+        background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
+      }
+
+    }
     .en {
+      display: block;
+      background: url(../img/common/bg-title.jpg) center/cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-family: $font_en;
       font-size: 13.54vw;
       font-size: clamp(0px, 13.54vw, 260px);
       font-weight: bold;
+      line-height: 1;
     }
   }
   .sec-right {
-    width: 100%;
+    width: 46.25vw;
+    max-width: 888px;
     height: 100%;
   }
 }

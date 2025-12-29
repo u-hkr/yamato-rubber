@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media print, screen and (min-width: 1025px) {
   .tb {
     display: none !important;
@@ -188,15 +189,45 @@ figure img,
 .c-heading .sec-inner {
   display: grid;
   grid-template-columns: 1032fr 888fr;
-  height: 65.5rem;
+  height: 655px;
+  height: clamp(0px, 34.11vw, 655px);
+}
+.c-heading .sec-left {
+  padding-top: 8rem;
+  padding-left: clamp(0px, 4vw, 88px);
+}
+.c-heading .sec-left .title {
+  position: relative;
+  display: block;
+  font-size: 5.6rem;
+  font-size: clamp(0px, 3vw, 56px);
+  font-weight: 700;
+  padding-left: 1.64em;
+}
+.c-heading .sec-left .title::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  width: 1em;
+  height: 1em;
+  background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
 }
 .c-heading .sec-left .en {
+  display: block;
+  background: url(../img/common/bg-title.jpg) center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-size: 13.54vw;
   font-size: clamp(0px, 13.54vw, 260px);
   font-weight: bold;
+  line-height: 1;
 }
 .c-heading .sec-right {
-  width: 100%;
+  width: 46.25vw;
+  max-width: 888px;
   height: 100%;
 }
 
@@ -349,9 +380,18 @@ figure img,
   width: 100%;
   height: 100lvh;
   z-index: -999;
+  opacity: 0.6;
 }
 #bg * {
   height: 100%;
+}
+#bg::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
 }
 #bg img {
   display: block;
