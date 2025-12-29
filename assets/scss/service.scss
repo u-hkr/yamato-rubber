@@ -1,5 +1,21 @@
+@charset "UTF-8";
+// Foundation
+@import "Foundation/variable";
+@import "Foundation/mixin";
+
 #introduction {
   .sec-inner {
     
+  }
+}
+
+#service {
+  .sec-box {
+    padding: 112px 15px;
+
+    &-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
   }
 }

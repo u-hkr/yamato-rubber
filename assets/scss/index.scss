@@ -1,0 +1,92 @@
+@charset "UTF-8";
+// Foundation
+@import "Foundation/variable";
+@import "Foundation/mixin";
+
+.c-subtitle-ellipse {
+  margin-bottom: 2em;
+  font-family: $font;
+}
+
+#mv {
+  height: 100vh;
+
+  .sec-title {
+    --width: 702px;
+    position: relative;
+    width: var(--width);
+    height: calc(var(--width) * .349);
+    background: url(../img/common/yamatogomu-base.svg) left/contain no-repeat;
+    font-size: 0;
+
+    // アニメーション用「O」
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 83%;
+      display: block;
+      height: 46.53%;
+      width: 15.09%;
+      background: url(../img/common/yamatogomu-o.svg) center/contain no-repeat;
+    }
+    &::after {
+      top: 53%;
+      left: 16%;
+    }
+  }
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100lvh;
+  z-index: -999;
+  opacity: .6;
+
+  * {
+    height: 100%;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
+    z-index: 2;
+  }
+
+  img {
+    display: block;
+    margin: 0 4.4rem;
+  }
+}
+
+#introduction {
+  .sec-inner {
+    
+  }
+}
+
+#service {
+  padding: 0;
+
+  .sec-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 28.59vw;
+    max-height: 549px;
+  }
+  .sec-box {
+    max-width: 1428px;
+    margin: 0 auto;
+    padding: 112px 15px;
+
+    &-inner {
+      max-width: 1144px;
+      margin: 0 auto;
+    }
+  }
+}

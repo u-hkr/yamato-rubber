@@ -1,1 +1,7 @@
-/*# sourceMappingURL=service.css.map */
+#service .sec-box {
+  padding: 112px 15px;
+}
+#service .sec-box-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}/*# sourceMappingURL=service.css.map */

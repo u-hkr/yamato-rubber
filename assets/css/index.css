@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.c-subtitle-ellipse {
+  margin-bottom: 2em;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+#mv {
+  height: 100vh;
+}
+#mv .sec-title {
+  --width: 702px;
+  position: relative;
+  width: var(--width);
+  height: calc(var(--width) * 0.349);
+  background: url(../img/common/yamatogomu-base.svg) left/contain no-repeat;
+  font-size: 0;
+}
+#mv .sec-title::before, #mv .sec-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 83%;
+  display: block;
+  height: 46.53%;
+  width: 15.09%;
+  background: url(../img/common/yamatogomu-o.svg) center/contain no-repeat;
+}
+#mv .sec-title::after {
+  top: 53%;
+  left: 16%;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100lvh;
+  z-index: -999;
+  opacity: 0.6;
+}
+#bg * {
+  height: 100%;
+}
+#bg::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+#bg img {
+  display: block;
+  margin: 0 4.4rem;
+}
+
+#service {
+  padding: 0;
+}
+#service .sec-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 28.59vw;
+  max-height: 549px;
+}
+#service .sec-box {
+  max-width: 1428px;
+  margin: 0 auto;
+  padding: 112px 15px;
+}
+#service .sec-box-inner {
+  max-width: 1144px;
+  margin: 0 auto;
+}/*# sourceMappingURL=index.css.map */

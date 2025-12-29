@@ -173,8 +173,12 @@ figure img,
   opacity: 0.7;
 }
 
+.ff-en {
+  font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
 .c-section {
-  padding: 0 2.5rem;
+  padding: 0 24px;
 }
 
 .c-inner {
@@ -235,8 +239,11 @@ figure img,
   display: block;
   margin-bottom: 0.8em;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.6;
+}
+.c-title .num {
+  margin-right: 16px;
 }
 
 .c-title-ellipse {
@@ -260,19 +267,20 @@ figure img,
 .c-subtitle-ellipse {
   display: block;
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 5px;
+  font-family: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  padding-left: 0.9em;
+  padding-left: 1.8em;
   line-height: 1.6;
 }
 .c-subtitle-ellipse::before {
   content: "";
   position: absolute;
-  top: 0.6em;
-  left: 0.2em;
-  width: 0.5em;
-  height: 0.5em;
+  top: 0.4em;
+  left: 0.5em;
+  width: 0.9em;
+  height: 0.9em;
   background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
 }
 
@@ -369,31 +377,48 @@ figure img,
   opacity: 1;
 }
 
-#mv {
-  height: 100vh;
+.c-sidenav {
+  display: grid;
+  grid-template-columns: 138px 1fr;
+  gap: 0 17px;
+  max-width: 1740px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.c-sidenav-nav {
+  padding: 24px 10px 24px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.c-sidenav-nav .item {
+  display: block;
+}
+.c-sidenav-cnt {
+  max-width: 1428px;
 }
 
-#bg {
-  position: fixed;
+.c-box {
+  position: relative;
+  border-radius: 2.4rem;
+  z-index: 2;
+}
+.c-box::before, .c-box::after {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100lvh;
-  z-index: -999;
-  opacity: 0.6;
-}
-#bg * {
   height: 100%;
+  border-radius: inherit;
 }
-#bg::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
+.c-box::before {
+  top: 1px;
+  height: calc(100% - 2px);
+  background: url(../img/common/bg-box.jpg) center/cover no-repeat;
+  z-index: -1;
 }
-#bg img {
-  display: block;
-  margin: 0 4.4rem;
+.c-box::after {
+  background: linear-gradient(90deg, #3A982A 0%, #008DD4 100%);
+  border-radius: inherit;
+  z-index: -2;
 }/*# sourceMappingURL=style.css.map */
