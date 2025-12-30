@@ -2288,4 +2288,116 @@
 .align-center {
   display: flex;
   align-items: center !important;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  padding: 0 2.4rem;
+  background: #fff;
+  z-index: 100;
+  font-size: 16px;
+  font-size: clamp(14px, 1.36vw, 16px);
+}
+#header .sec-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1720px;
+  height: 100%;
+  margin: 0 auto;
+}
+#header .sec-inner .logo {
+  display: block;
+}
+#header .sec-inner .logo img {
+  display: block;
+  width: 26rem;
+  min-width: 150px;
+}
+#header .sec-inner .contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  height: 100%;
+  margin-left: auto;
+  padding: 0 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+#header .sec-inner .contact::before, #header .sec-inner .contact::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10rem;
+  width: 23rem;
+  min-width: 150px;
+  height: 23rem;
+  min-height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+#header .sec-inner .contact::before {
+  background: #E81E10;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+#header .sec-inner .contact::after {
+  background: #fff;
+  border: 4px solid #E81E10;
+  transform: translateX(-50%) scale(0);
+  z-index: -1;
+}
+#header .sec-inner .contact:hover {
+  color: #E81E10;
+}
+#header .sec-inner .contact:hover::after {
+  transform: translateX(-50%) scale(1);
+}
+#header .sec-list {
+  display: flex;
+  height: 100%;
+  margin-left: 4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+#header .sec-list .link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.6rem;
+}
+#header .sec-list .link > span {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 1rem;
+}
+#header .sec-list .link > span::before, #header .sec-list .link > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12.5%;
+  display: block;
+  width: 75%;
+  height: 2px;
+  background: #E81E10;
+  border-radius: 10px;
+}
+#header .sec-list .link > span::after {
+  transform: rotate(90deg);
+}
+#header .sec-list .br {
+  display: none;
+}
+@media only screen and (max-width: 1400px) {
+  #header .sec-list .br {
+    display: block;
+  }
 }/*# sourceMappingURL=common.css.map */

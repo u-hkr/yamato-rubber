@@ -8,9 +8,84 @@
   font-family: $font;
 }
 
-#mv {
-  height: 100vh;
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
 
+  &.active {
+    .logo {
+      -webkit-animation: bound-o 1s 0s both;
+      animation: bound-o 1s 0s both;
+
+      &-line {
+        transform: scale(5);
+        opacity: 0;
+      }
+      &-base {
+        opacity: 0;
+      }
+    }
+  }
+  .logo {
+    position: relative;
+    width: 560px;
+    height: 392px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 1;
+      transform: scale(1);
+      transition: transform 2s 1.2s ease-in-out, opacity 2s 1.2s ease-in-out;
+    }
+  }
+}
+#mv {
+  height: 100lvh;
+
+  &.active {
+    .sec-title::before,
+    .sec-title::after {
+      -webkit-animation: bound-o 1s .5s both;
+      animation: bound-o 1s .5s both;
+    }
+  }
+  .sec-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: calc(88px + 5lvh) 5.20vw 5lvh;
+  }
+  .sec-text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    span {
+      display: block;
+
+      + span {
+        margin-top: .63em;
+      }
+      &:last-child {
+        padding-left: .61em;
+      }
+    }
+  }
   .sec-title {
     --width: 702px;
     position: relative;
@@ -18,6 +93,7 @@
     height: calc(var(--width) * .349);
     background: url(../img/common/yamatogomu-base.svg) left/contain no-repeat;
     font-size: 0;
+    flex-shrink: 0;
 
     // アニメーション用「O」
     &::before,
@@ -39,10 +115,10 @@
 }
 #bg {
   position: fixed;
-  top: 0;
+  top: 10lvh;
   left: 0;
   width: 100%;
-  height: 100lvh;
+  height: 85lvh;
   z-index: -999;
   opacity: .6;
 

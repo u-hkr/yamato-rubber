@@ -9,6 +9,11 @@ html {
   font-size: 10px;
   margin: 0;
 }
+@media print, screen and (max-width: 1920px) {
+  html {
+    font-size: 0.5208vw;
+  }
+}
 @media print, screen and (max-width: 1024px) {
   html {
     font-size: 0.9765vw;
@@ -273,98 +278,24 @@ fieldset {
 *:first-child + html .clearfix {
   zoom: 1;
 }
-@keyframes link-lineloop {
+@keyframes bound-o {
   0% {
-    transform: scaleX(1);
-    transform-origin: top right;
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
   }
-  30% {
-    transform: scaleX(0);
-    transform-origin: top right;
+  25% {
+    transform: translateY(-20px);
+    animation-timing-function: ease-in;
   }
-  32% {
-    transform: scaleX(0);
-    transform-origin: top left;
-  }
-  to {
-    transform: scaleX(1);
-    transform-origin: top left;
-  }
-}
-@keyframes link-lineloop-vertical {
-  0% {
-    transform: scaleY(1);
-    transform-origin: bottom left;
-  }
-  30% {
-    transform: scaleY(0);
-    transform-origin: bottom left;
-  }
-  32% {
-    transform: scaleY(0);
-    transform-origin: top left;
-  }
-  to {
-    transform: scaleY(1);
-    transform-origin: top left;
-  }
-}
-@keyframes shake-loop {
-  0% {
-    transform: translateX(-5px);
-    -webkit-transform: translateX(-5px);
-    -moz-transform: translateX(-5px);
-    -ms-transform: translateX(-5px);
-    -o-transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(5px);
-    -webkit-transform: translateX(5px);
-    -moz-transform: translateX(5px);
-    -ms-transform: translateX(5px);
-    -o-transform: translateX(5px);
-  }
-}
-@keyframes shake-loop-vertical {
-  0% {
-    transform: translateY(5px);
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-  }
-}
-@keyframes click_effect {
   50% {
-    transform: scale(1.5, 1.5);
-    opacity: 0;
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
   }
-  99% {
-    transform: scale(0.001, 0.001);
-    opacity: 0;
+  75% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-in;
   }
   100% {
-    transform: scale(0.001, 0.001);
-    opacity: 1;
-  }
-}
-@keyframes h_slide {
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes blur {
-  from {
-    filter: blur(10px);
-  }
-  to {
-    filter: blur(0px);
+    transform: translateY(0px);
   }
 }/*# sourceMappingURL=reset.css.map */

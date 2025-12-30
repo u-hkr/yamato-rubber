@@ -9,6 +9,9 @@
 html {
   font-size: 10px;
   margin: 0;
+  @include media('full') {
+    font-size: .5208vw;
+  }
   @include media('tb') {
     font-size: 0.9765vw;
   }
