@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <?php if (is_front_page() || is_home()) {
+            echo get_bloginfo('name');
+        } else {
+            wp_title('|', true, 'right');
+            echo bloginfo('name');
+        } ?>
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo home_url(); ?>" />
+
+    <link rel="icon" type="image/vnd.microsoft.icon"
+        href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+
+    <!-- Fonts and CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
+
+</head>
+<body>
+
+    <nav id="nav" class="tb">
+        <div class="sec-inner">
+
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="sec-inner">
+
+        </div>
+    </header>
+
+    <div class="c-heading">
+        <div class="sec-inner">
+            <div class="sec-left">
+                <h1 class="title">お知らせ</h1>
+                <p class="en">News</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- 投稿詳細 -->
+        <section id="post" class="section c-section">
+            <div class="sec-inner c-inner">
+                <div class="sec-top">
+                    <time datetime="2024-00-00" class="date">2024.00.00</time>
+                    <span class="category important">カテゴリー</span>
+                </div>
+                <h2 class="sec-title">タイトル入ります</h2>
+                <div class="sec-box c-post">
+                    <!-- この中は編集不可 -->
+                    <figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1235" height="554" src="./assets/img/news/sample.jpg" alt="" class="wp-image-8"></figure>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <h1>見出し１</h1>
+                    <p>テキストテキストテキストテキスト</p>
+                    <h2>見出し２</h2>
+                    <p>テキストテキストテキストテキスト</p>
+                    <h3>見出し３</h3>
+                    <p>テキストテキストテキストテキスト</p>
+                    <h4>見出し４</h4>
+                    <p>テキストテキストテキストテキスト</p>
+                    <h5>見出し５</h5>
+                    <p>テキストテキストテキストテキスト</p>
+                    <h6>見出し６</h6>
+                    <p>テキストテキストテキストテキスト</p>
+                    <ul>
+                        <li>テキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキスト
+                            <ul><li>テキストテキストテキストテキスト</li></ul>
+                        </li>
+                        <li>テキストテキストテキストテキスト</li>
+                    </ul>
+                    <ol>
+                        <li>テキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキスト
+                            <ul><li>テキストテキストテキストテキスト</li></ul>
+                        </li>
+                        <li>テキストテキストテキストテキスト</li>
+                    </ol>
+                </div>
+                <a href="" class="sec-btn">一覧に戻る</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ $(function(){
   $(".js-bg").slick({
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 60000,
+    speed: 50000,
     cssEase: "linear",
     slidesToShow: 1,
     variableWidth: true,
@@ -31,6 +31,14 @@ $(function(){
     pauseOnFocus: false,
     pauseOnHover: false,
     useTransform: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       speed: 30000,
+    //     }
+    //   }
+    // ]
   });
 
   var topReturn = false;
