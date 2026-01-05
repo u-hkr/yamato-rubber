@@ -377,6 +377,52 @@ figure img,
   opacity: 1;
 }
 
+.c-btn-accent {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+  text-align: left;
+}
+.c-btn-accent .arw {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 62px;
+  height: 100%;
+  background: url(../img/common/icon-ellipse-gray.svg) center/contain no-repeat;
+}
+.c-btn-accent .arw::before, .c-btn-accent .arw::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.c-btn-accent .arw::before {
+  position: relative;
+  margin-top: -1px;
+  background: url(../img/common/icon-arrow-white.svg) center/14px no-repeat;
+  z-index: 2;
+}
+.c-btn-accent .arw::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/common/icon-ellipse.svg) center/contain no-repeat;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+a:hover .c-btn-accent .arw::before {
+  background-image: url(../img/common/icon-arrow.svg);
+}
+a:hover .c-btn-accent .arw::after {
+  opacity: 0;
+}
+
 .c-sidenav {
   display: grid;
   grid-template-columns: 138px 1fr;
