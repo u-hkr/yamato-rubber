@@ -30,6 +30,7 @@ $(function(){
     arrows: false,
     pauseOnFocus: false,
     pauseOnHover: false,
+    useTransform: false,
   });
 
   const $header = $("#header");
@@ -49,6 +50,7 @@ $(function(){
     }else{
       $nav.fadeIn();
       $nav.addClass("active");
+      // $nav.css("animation-name", "bound-nav");
 
       body_pos = $(window).scrollTop();
       $body.css("top", -body_pos);
@@ -93,4 +95,20 @@ $(function(){
     }
     $elem.css("left", transform+"px");
   }
+
+  $nav.find(".sec-list .link").each(function(){
+    const $elem = $(this);
+    if($elem.next(".children").length){
+      $elem.click(function(){
+      });
+    }
+  });
+  $nav.find(".sec-list .link").click(function(){
+    if($(this).hasClass("active")){
+      $(this).next(".children").slideUp();
+    }else{
+      $(this).next(".children").slideDown();
+    }
+    $(this).toggleClass("active");
+  });
 });

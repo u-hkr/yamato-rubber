@@ -262,7 +262,7 @@
     }
   }
 }
-a:hover .c-btn-accent {
+a:hover .c-btn-accent, a.c-btn-accent:hover {
   .arw {
     &::before {
       background-image: url(../img/common/icon-arrow.svg);
