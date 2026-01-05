@@ -188,16 +188,19 @@ figure img,
 }
 
 .c-section {
-  padding: 0 24px;
+  padding: 0 2.4rem;
 }
 
 .c-inner {
   max-width: 1428px;
   margin: 0 auto;
 }
-
 .c-inner-s {
   max-width: 1140px;
+  margin: 0 auto;
+}
+.c-inner-1000 {
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -514,4 +517,51 @@ a:hover .c-btn-accent .arw::after, a.c-btn-accent:hover .arw::after {
   .c-bg {
     top: 0;
   }
+}
+
+.c-post > *:first-child {
+  margin-top: 0 !important;
+}
+.c-post > *:last-child {
+  margin-bottom: 0 !important;
+}
+.c-post h1, .c-post h2, .c-post h3, .c-post h4, .c-post h5, .c-post h6 {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+}
+.c-post h1, .c-post h2 {
+  font-size: 26px;
+}
+.c-post h3 {
+  font-size: 24px;
+}
+.c-post h4 {
+  font-size: 22px;
+}
+.c-post h5 {
+  font-size: 20px;
+}
+.c-post h6 {
+  font-size: 18px;
+}
+.c-post p {
+  min-height: 1em;
+  margin-bottom: 1em;
+}
+.c-post ul {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  list-style: disc;
+}
+.c-post ul ul {
+  margin: 0.5em;
+  list-style: circle;
+}
+.c-post ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  list-style: decimal;
+}
+.c-post > .wp-block-image {
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <?php if (is_front_page() || is_home()) {
+            echo get_bloginfo('name');
+        } else {
+            wp_title('|', true, 'right');
+            echo bloginfo('name');
+        } ?>
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo home_url(); ?>" />
+
+    <link rel="icon" type="image/vnd.microsoft.icon"
+        href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+
+    <!-- Fonts and CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
+
+</head>
+<body>
+
+    <nav id="nav" class="tb">
+        <div class="sec-inner">
+
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="sec-inner">
+
+        </div>
+    </header>
+
+    <div class="c-heading">
+        <div class="sec-inner">
+            <div class="sec-left">
+                <h1 class="title">お知らせ</h1>
+                <p class="en">News</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- 投稿一覧 -->
+        <section id="post" class="section c-section">
+            <div class="sec-inner c-inner-1000">
+                <div class="sec-list">
+                    <a href="" class="item">
+                        <div class="img" style="background: #D9D9D9;"><img class="u-img-cover" src="" alt=""></div>
+                        <div class="info">
+                            <time datetime="2024-00-00" class="date">2024.00.00</time>
+                            <span class="category">カテゴリー</span>
+                        </div>
+                        <h2 class="title">タイトル入りますタイトル入りますタイトル入りますタイトル入りますタイトル入りますタイトル入りますタイトル入り入り</h2>
+                    </a>
+                </div>
+                <div class="sec-nav">
+                    <!-- sec-nav内のHTMLは変更不可 -->
+                    <nav class="navigation pagination" aria-label="投稿">
+                        <!-- <h2 class="screen-reader-text">投稿ナビゲーション</h2> -->
+                        <div class="nav-links">
+                            <a class="prev page-numbers" href="">前へ</a>
+                            <a class="page-numbers" href=""><span>1</span></a>
+                            <span aria-current="page" class="page-numbers current"><span>2</span></span>
+                            <a class="page-numbers" href=""><span>3</span></a>
+                            <span class="page-numbers dots">…</span>
+                            <a class="page-numbers" href=""><span>6</span></a>
+                            <a class="next page-numbers" href="">次へ</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
