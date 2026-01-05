@@ -19,7 +19,7 @@ $(window).on('load', function() {
 });
 
 $(function(){
-  $("#bg").slick({
+  $(".js-bg").slick({
     autoplay: true,
     autoplaySpeed: 0,
     speed: 60000,
@@ -36,13 +36,23 @@ $(function(){
   const $header_items = $header.find(".sec-list .item");
   const $header_children = $header.find(".sec-list .children");
   const $nav = $("#nav");
+  const $body = $("body");
+  var body_pos = 0;
   $(".js-nav-btn").click(function(){
     if($(this).hasClass("active")){
       $nav.fadeOut();
       $nav.removeClass("active");
+
+      $body.css("top", "");
+      $body.removeClass("fixed");
+      $(window).scrollTop(body_pos);
     }else{
       $nav.fadeIn();
       $nav.addClass("active");
+
+      body_pos = $(window).scrollTop();
+      $body.css("top", -body_pos);
+      $body.addClass("fixed");
     }
     $(this).toggleClass("active");
   });

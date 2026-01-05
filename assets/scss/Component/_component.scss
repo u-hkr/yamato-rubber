@@ -5,6 +5,10 @@
   max-width: 1428px;
   margin: 0 auto;
 }
+.c-inner-s {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 .c-heading {
   max-width: 1920px;
@@ -117,6 +121,7 @@
   position: relative;
   display: inline-block;
   min-width: 376px;
+  height: fit-content;
   padding: 30px 126px 30px 48px;
   background: $base_color;
   border-radius: 100px;
@@ -315,5 +320,32 @@ a:hover .c-btn-accent {
     background: $main_gradient;
     border-radius: inherit;
     z-index: -2;
+  }
+}
+
+.c-bg {
+  position: fixed;
+  top: 10lvh;
+  left: 0;
+  width: 100%;
+  height: 85lvh;
+  z-index: -999;
+  opacity: .6;
+
+  * {
+    height: 100%;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
+    z-index: 2;
+  }
+
+  img {
+    display: block;
+    margin: 0 4.4rem;
   }
 }

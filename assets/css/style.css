@@ -166,6 +166,16 @@ figure img,
   padding-left: 1.5em;
 }
 
+.u-line {
+  padding-left: 2px;
+  display: inline;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #008DD4, #3A982A);
+  background-repeat: no-repeat;
+  background-size: 100% 1.25em;
+  background-position: center;
+}
+
 .h-opacity a, a.h-opacity {
   transition: opacity 0.3s;
 }
@@ -183,6 +193,11 @@ figure img,
 
 .c-inner {
   max-width: 1428px;
+  margin: 0 auto;
+}
+
+.c-inner-s {
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -288,6 +303,8 @@ figure img,
   position: relative;
   display: inline-block;
   min-width: 376px;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 30px 126px 30px 48px;
   background: #241915;
   border-radius: 100px;
@@ -467,4 +484,29 @@ a:hover .c-btn-accent .arw::after {
   background: linear-gradient(90deg, #3A982A 0%, #008DD4 100%);
   border-radius: inherit;
   z-index: -2;
+}
+
+.c-bg {
+  position: fixed;
+  top: 10lvh;
+  left: 0;
+  width: 100%;
+  height: 85lvh;
+  z-index: -999;
+  opacity: 0.6;
+}
+.c-bg * {
+  height: 100%;
+}
+.c-bg::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+.c-bg img {
+  display: block;
+  margin: 0 4.4rem;
 }/*# sourceMappingURL=style.css.map */

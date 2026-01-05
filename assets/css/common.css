@@ -2474,7 +2474,39 @@
   }
 }
 @media print, screen and (max-width: 1024px) {
-  #header .sec-inner .logo img {
-    width: 10rem;
+  #header {
+    height: 100px;
   }
+  #header .sec-inner .logo img {
+    width: 180px;
+    min-width: 0;
+  }
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: calc(100lvh + 100px);
+  padding-bottom: 100px;
+  clip-path: inset(0);
+  z-index: 99;
+}
+#nav.active + #navbg {
+  opacity: 1;
+}
+
+#navbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100lvh + 100px);
+  background: #fff;
+  opacity: 0;
+  z-index: 98;
+  pointer-events: none;
+  transition: opacity 0.3s;
 }/*# sourceMappingURL=common.css.map */

@@ -156,6 +156,20 @@ figure img,
   list-style: disc;
   padding-left: 1.5em;
 }
+.u-line{
+  padding-left: 2px;
+    display: inline;
+    color: $white_color;
+    background:
+      linear-gradient(
+        to right,
+        #008DD4,
+        #3A982A
+      );
+    background-repeat: no-repeat;
+    background-size: 100% 1.25em;
+    background-position: center;
+  }
 
 .h-opacity a, a.h-opacity {
   transition: opacity .3s;

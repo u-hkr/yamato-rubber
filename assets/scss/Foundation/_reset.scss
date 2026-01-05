@@ -13,7 +13,7 @@ html {
     font-size: .5208vw;
   }
   @include media('tb') {
-    font-size: 0.9765vw;
+    font-size: .9765vw;
   }
   @include media('sp') {
     font-size: 2.5vw;
@@ -31,6 +31,10 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+
+  &.fixed {
+    position: fixed;
+  }
 }
 
 div,

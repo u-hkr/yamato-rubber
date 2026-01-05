@@ -205,9 +205,12 @@
   }
 
   @include media('tb') {
+    height: 100px;
+
     .sec-inner {
       .logo img {
-        width: 10rem;
+        width: 180px;
+        min-width: 0;
       }
     }
   }
