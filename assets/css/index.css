@@ -46,6 +46,7 @@
 
 #mv {
   height: 100lvh;
+  overflow: hidden;
 }
 #mv.active .sec-title::before,
 #mv.active .sec-title::after {
@@ -63,6 +64,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
+  white-space: nowrap;
 }
 #mv .sec-text span {
   display: block;
@@ -95,6 +97,34 @@
 #mv .sec-title::after {
   top: 53%;
   left: 16%;
+}
+@media print, screen and (max-width: 1024px) {
+  #mv .sec-inner {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  #mv .sec-text {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  #mv .sec-title {
+    --width: 675px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #mv .sec-inner {
+    justify-content: flex-end;
+  }
+  #mv .sec-text {
+    margin-bottom: 4rem;
+    font-size: 2.8rem;
+  }
+  #mv .sec-text span + span {
+    margin-top: 0.8em;
+  }
+  #mv .sec-title {
+    --width: 88vw;
+  }
 }
 
 #introduction .sec-inner {

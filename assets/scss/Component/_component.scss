@@ -348,4 +348,8 @@ a:hover .c-btn-accent, a.c-btn-accent:hover {
     display: block;
     margin: 0 4.4rem;
   }
+
+  @include media('sp') {
+    top: 0;
+  }
 }

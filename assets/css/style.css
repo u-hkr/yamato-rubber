@@ -509,4 +509,9 @@ a:hover .c-btn-accent .arw::after, a.c-btn-accent:hover .arw::after {
 .c-bg img {
   display: block;
   margin: 0 4.4rem;
+}
+@media only screen and (max-width: 768px) {
+  .c-bg {
+    top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

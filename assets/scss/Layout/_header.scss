@@ -5,10 +5,15 @@
   width: 100%;
   height: 88px;
   padding: 0 2.4rem;
-  background: #fff;
+  background: #ffffffcc;
   z-index: 100;
   font-size: 16px;
   font-size: clamp(14px, 1.36vw, 16px);
+  transition: background .3s;
+
+  // &.-bg {
+  //   background: #fff;
+  // }
 
   .sec-inner {
     display: flex;

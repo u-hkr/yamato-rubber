@@ -33,6 +33,20 @@ $(function(){
     useTransform: false,
   });
 
+  var topReturn = false;
+  var $topReturn = $('#pagetop');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500 && !topReturn) {
+      $topReturn.fadeIn();
+      topReturn = true;
+      // $header.addClass("-bg");
+    } else if($(this).scrollTop() <= 500 && topReturn) {
+      $topReturn.fadeOut();
+      topReturn = false;
+      // $header.removeClass("-bg");
+    }
+  });
+
   const $header = $("#header");
   const $header_items = $header.find(".sec-list .item");
   const $header_children = $header.find(".sec-list .children");

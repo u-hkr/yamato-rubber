@@ -54,6 +54,7 @@
 }
 #mv {
   height: 100lvh;
+  overflow: hidden;
 
   &.active {
     .sec-title::before,
@@ -74,6 +75,7 @@
     font-size: 36px;
     font-weight: 700;
     line-height: 1.2;
+    white-space: nowrap;
 
     span {
       display: block;
@@ -110,6 +112,36 @@
     &::after {
       top: 53%;
       left: 16%;
+    }
+  }
+
+  @include media('tb') {
+    .sec-inner {
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+    .sec-text {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+    .sec-title {
+      --width: 675px;
+    }
+  }
+  @include media('sp') {
+    .sec-inner {
+      justify-content: flex-end;
+    }
+    .sec-text {
+      margin-bottom: 4rem;
+      font-size: 2.8rem;
+
+      span + span {
+        margin-top: 0.8em;
+      }
+    }
+    .sec-title {
+      --width: 88vw;
     }
   }
 }

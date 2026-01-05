@@ -2297,10 +2297,11 @@
   width: 100%;
   height: 88px;
   padding: 0 2.4rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 100;
   font-size: 16px;
   font-size: clamp(14px, 1.36vw, 16px);
+  transition: background 0.3s;
 }
 #header .sec-inner {
   display: flex;
